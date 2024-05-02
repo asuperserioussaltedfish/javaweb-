@@ -1,0 +1,462 @@
+﻿h1,
+h2,
+h3,
+nav,
+footer {
+   font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+
+body {
+   font-family: "Lucida Sans", Verdana, Arial, sans-serif;
+   font-size: 80%;
+}
+
+.background-image-blur-whitewash {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   filter: blur(15px) contrast(0.2) brightness(1.7);
+   z-index: -1;
+}
+
+h1,
+h2,
+h3,
+nav,
+footer {
+   font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+
+body {
+   background-color: rgb(31, 31, 31);
+   font-family: "Lucida Sans", Verdana, Arial, sans-serif;
+   font-size: 80%;
+}
+
+.background-image-blur-whitewash {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   filter: blur(15px) contrast(0.2) brightness(1.7);
+   z-index: -1;
+}
+
+.all {
+   transform: scale(0.85);
+   /* 缩放比例 */
+   transform-origin: top center;
+   /* 缩放的基准点 */
+   width: 1400px;
+   height: 100%;
+   margin: auto;
+   overflow: hidden;
+}
+
+header {
+   text-align: center;
+   color: rgb(255, 255, 255);
+}
+
+header h1 {
+   margin-bottom: 0;
+   font-size: 450%;
+}
+
+.main::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-image: url('images/background.jpg');
+   filter: blur(60px) brightness(190%);
+   z-index: -1;
+   border-radius: 10px;
+}
+
+.main {
+   height: 450px;
+   position: relative;
+   overflow: hidden;
+   /* 防止伪元素溢出边界 */
+   padding: 20px;
+   display: flex;
+}
+.filters-search-container {
+   display: flex;
+}
+
+.filters-container {
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   margin-right: 20px;
+}
+
+.search-container {
+   box-shadow: 5px 5px 5px 0px rgb(153, 153, 150);
+   height: 300px;
+   border: 2px solid #000000;
+   flex: 1 1 0%;
+   margin-left: 10px;
+   margin-right: 40px;
+   background-color: rgb(249, 249, 249);
+   padding: 10px;
+   margin-top: 30px;
+}
+
+h2 {
+   color: rgb(59, 59, 59);
+   font-size: 120%;
+}
+
+/* 过滤器的样式 */
+.filters-container h2 {
+   margin-left: 15px;
+   width: 60%;
+   border-bottom: 1.5px solid rgb(179, 176, 176);
+   padding-bottom: 10px;
+}
+
+.filter {
+   color: rgb(59, 59, 59);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 10px;
+}
+
+.filter label {
+   color: rgb(59, 59, 59);
+   flex: 1;
+   text-align: left;
+   margin-right: 10px;
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+}
+
+.filter input[type="range"] {
+   width: 100%;
+   height: 5px;
+   /* 轨道高度 */
+   border-radius: 5px;
+   background: #ddd;
+   outline: none;
+}
+
+.filter input[type="range"]::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   appearance: none;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background: rgb(31, 31, 31);
+   cursor: pointer;
+}
+
+.filter input[type="range"]::-moz-range-thumb {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background: rgb(31, 31, 31);
+   ;
+   cursor: pointer;
+}
+
+#search-input::placeholder {
+   font-weight: bold;
+   /* 使占位符文字加粗 */
+   color: #000000;
+}
+
+#search-input::placeholder {
+   color: rgb(59, 59, 59);
+}
+
+/* 搜索部分的样式 */
+#search-form {
+   display: flex;
+   width: 100%;
+}
+
+#search-input {
+   color: rgb(59, 59, 59);
+   flex: 1;
+   padding: 10px;
+   margin-right: 10px;
+   border: 2px solid #000000;
+}
+
+#search-form button {
+   padding: 10px 20px;
+   background-color: rgb(31, 31, 31);
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.character-comparison {
+   margin-top: 20px;
+   flex: 3;
+}
+
+.history-container {
+   box-shadow: 5px 5px 5px 0px rgb(153, 153, 150);
+   border: 2px solid #000000;
+   height: 170px;
+   flex: 1;
+   margin-left: 40px;
+   margin-right: 10px;
+   background-color: #f9f9f9;
+   padding: 10px;
+   margin-top: 30px;
+}
+
+#history-table {
+   font-family: Arial, sans-serif;
+   border-collapse: separate;
+   border-spacing: 0;
+   width: 100%;
+   overflow-y: auto;
+   display: block;
+   max-height: 100px;
+   margin-top: -10px;
+   background-color: transparent;
+   -ms-overflow-style: none;
+   /* IE and Edge */
+   scrollbar-width: none;
+   /* Firefox */
+}
+
+#history-table th,
+#history-table td {
+   text-align: left;
+   padding: 8px;
+}
+
+.character-vs-character {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background-color: rgb(31, 31, 31);
+   padding: 20px;
+   background-color: rgb(31, 31, 31);
+   padding: 20px;
+   border-radius: 10px;
+   margin-top: 3px;
+}
+
+.flag {
+   background-color: #e2e2e2;
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   height: 360px;
+}
+
+.character-container {
+   text-align: center;
+}
+
+.character-container1 {
+   margin-left: 230px;
+}
+
+.character-container2 {
+   margin-right: 230px;
+}
+
+.character-image {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px solid #fff;
+}
+
+.character-name {
+   font-size: 2rem;
+   font-weight: bold;
+   color: #fff;
+}
+
+.vs-sign {
+   font-size: 5rem;
+   color: #fff;
+   margin: 0 20px;
+}
+
+.wrapperAll {
+   min-height: 450px;
+   position: relative;
+   padding: 20px;
+   border-radius: 10px;
+   margin-bottom: 20px;
+   overflow: hidden;
+}
+
+.wrapperAll::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-image: url('images/background.jpg');
+   filter: blur(60px) brightness(210%);
+   z-index: -1;
+   border-radius: 10px;
+}
+
+.wrapper {
+   margin: 50px 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 400px;
+   display: flex;
+}
+
+.comparison-results {
+   max-width: 300px;
+   flex: 2;
+   background-color: rgb(31, 31, 31);
+   color: #FFFFFF;
+   /* 白色文字 */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 360px;
+}
+
+.result {
+   padding: 5px 0;
+   border-bottom: 1px solid #FFFFFF;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 32px;
+}
+
+.result:last-child {
+   border: none;
+}
+
+.comparison-results .result {
+   border: none;
+}
+
+.history-container h2 {
+   color: rgb(59, 59, 59);
+   padding-bottom: 10px;
+   margin-left: 8px;
+
+}
+
+.history-container h2::after {
+   content: "";
+   display: block;
+   border-bottom: 2px solid rgb(179, 176, 176);
+   width: 50%;
+   margin-top: 10px;
+   margin-left: 18px;
+}
+
+#character-table {
+   color: rgb(59, 59, 59);
+   border-collapse: separate;
+   border-spacing: 0;
+   width: 98.5%;
+   overflow-y: auto;
+   display: block;
+   max-height: 330px;
+   max-width: 28000px;
+   margin-top: 20px;
+   background-color: transparent;
+   -ms-overflow-style: none;
+   /* IE and Edge */
+   scrollbar-width: none;
+   /* Firefox */
+}
+#character-table tr:hover {
+   background-color: rgb(249,249,249);
+   }
+#character-table th {
+   background-color: rgb(249,249,249);
+   border-bottom: 2px solid black;
+}
+
+#character-table td {
+   border-bottom: 1px solid #ccc;
+}
+
+#character-table th,
+#character-table td {
+   border-collapse: collapse;
+   padding: 12px;
+   text-align: left;
+}
+
+#character-table tbody {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+   overflow-y: scroll;
+}
+
+#character-table tbody::-webkit-scrollbar {
+   display: none;
+}
+
+input[type="checkbox"] {
+   appearance: none;
+   /* 移除默认的样式 */
+   -webkit-appearance: none;
+   /* 针对webkit浏览器 */
+   -moz-appearance: none;
+   /* 针对Mozilla浏览器 */
+   margin: 4px 4px 4px 5px;
+   /* 设置margin */
+   height: 23px;
+   /* 设置高度 */
+   width: 23px;
+   /* 设置宽度 */
+   border: 1px solid black;
+   /* 黑色边框 */
+   vertical-align: middle;
+   /* 垂直居中 */
+   cursor: pointer;
+   /* 鼠标指针变成手指形状 */
+}
+
+input[type="checkbox"]:checked {
+   background-color: rgb(229, 229, 229);
+}
+
+input[type="checkbox"]:checked::after {
+   content: '✔';
+   /* 选中时的勾选符号 */
+   color: rgb(0, 0, 0);
+   /* 勾选符号的颜色 */
+   display: block;
+   text-align: center;
+   position: relative;
+}
+.bingo {
+   width: 50px;
+   background: transparent;
+   display: none;
+}
